@@ -132,14 +132,6 @@ node ('lagoon-images') {
                     }
                   }
                 }
-            },
-            'push legacy images to amazeeio dockerhub': {
-              stage ('publish-amazeeio') {
-                withCredentials([string(credentialsId: 'amazeeiojenkins-dockerhub-password', variable: 'PASSWORD')]) {
-                  sh script: 'docker login -u amazeeiojenkins -p $PASSWORD', label: "Docker login"
-                  sh script: "make -O${SYNC_MAKE_OUTPUT} -j8 publish-amazeeio-baseimages", label: "Publishing legacy images to amazeeio"
-                }
-              }
             }
           )
         }
