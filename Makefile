@@ -182,12 +182,15 @@ build/rabbitmq-cluster: build/rabbitmq images/rabbitmq-cluster/Dockerfile
 versioned-images := 		php-8.1-fpm \
 							php-8.2-fpm \
 							php-8.3-fpm \
+							php-8.4-fpm \
 							php-8.1-cli \
 							php-8.2-cli \
 							php-8.3-cli \
+							php-8.4-cli \
 							php-8.1-cli-drupal \
 							php-8.2-cli-drupal \
 							php-8.3-cli-drupal \
+							php-8.4-cli-drupal \
 							python-3.8 \
 							python-3.9 \
 							python-3.10 \
